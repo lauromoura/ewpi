@@ -30,7 +30,7 @@ sed -i \
 
 make -j $jobopt PREFIX=$3 BUILD_STATIC=no CC=$4-gcc SHARED_EXT_VER=1 V=1 OS=Windows_NT > ../make.log 2>&1
 
-mkdir -p $3/{bin,include,lib/pkgconfig}
+mkdir -p $3/bin $3/include $3/lib/pkgconfig
 cp lz4.exe $3/bin
 cd lib
 cp dll/liblz4.1.dll $3/bin/liblz4-1.dll
